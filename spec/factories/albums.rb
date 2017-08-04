@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :album do
-    name { Faker::DrWho.villain }
+    name { Faker::DrWho.villian }
     art { Faker::Internet.url }
     artist_id nil
   end
