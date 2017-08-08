@@ -26,7 +26,7 @@ RSpec.describe 'Albums API', type: :request do
   describe 'GET /albums/:id' do
     before { get "/albums/#{album_id}" }
 
-    context 'when the record exists' do
+    context 'when the album exists' do
       it 'returns the album' do
         expect(json).not_to be_empty
         expect(json['id']).to eq(album_id)
@@ -37,7 +37,7 @@ RSpec.describe 'Albums API', type: :request do
       end
     end
 
-    context 'when the record does not exist' do
+    context 'when the album does not exist' do
       let(:album_id) { 100 }
 
       it 'returns status code 404' do
@@ -67,16 +67,31 @@ RSpec.describe 'Albums API', type: :request do
       end
     end
 
-    context 'when the request is invalid' do
-      before { post '/albums', params: { art: 'something.jpeg' } }
+    describe 'when request is invalid' do
+      context 'when the artist_id is missing' do
+        before { post '/albums', params: { name: 'Elite Tauren Chieftain Disc 1', art: 'something.jpeg' } }
 
-      it 'returns status code 422' do
-        expect(response).to have_http_status(422)
+        it 'returns status code 422' do
+          expect(response).to have_http_status(422)
+        end
+
+        it 'returns a validation failure message' do
+          expect(response.body)
+            .to match(/Validation failed: Artist must exist/)
+        end
       end
 
-      it 'returns a validation failure message' do
-        expect(response.body)
-          .to match(/Validation failed: Name can't be blank/)
+      context 'when the name is missing' do
+        before { post '/albums', params: { artist_id: artist.id, art: 'something.jpeg' } }
+
+        it 'returns status code 422' do
+          expect(response).to have_http_status(422)
+        end
+
+        it 'returns a validation failure message' do
+          expect(response.body)
+            .to match(/Validation failed: Name can't be blank/)
+        end
       end
     end
   end
@@ -85,15 +100,23 @@ RSpec.describe 'Albums API', type: :request do
   describe 'PUT /albums/:id' do
     let(:valid_attributes) { { name: 'New ETC' } }
 
-    context 'when the record exists' do
+    context 'when the album exists' do
       before { put "/albums/#{album_id}", params: valid_attributes }
 
-      it 'updates the record' do
+      it 'updates the album' do
         expect(response.body).to be_empty
       end
 
       it 'returns status code 204' do
         expect(response).to have_http_status(204)
+      end
+    end
+
+    context 'when the album does not exists' do
+      before { put "/albums/invalid", params: valid_attributes }
+
+      it 'returns status code 404' do
+        expect(response).to have_http_status(404)
       end
     end
   end

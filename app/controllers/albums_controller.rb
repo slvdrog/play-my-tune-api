@@ -1,5 +1,5 @@
 class AlbumsController < ApplicationController
-  before_action :load_albums, only: [:show, :update, :destroy]
+  before_action :load_album, only: [:show, :update, :destroy]
 
   # GET /albums
   def index
@@ -9,35 +9,35 @@ class AlbumsController < ApplicationController
 
   # POST /albums
   def create
-    @albums = Album.create!(albums_params)
+    @albums = Album.create!(album_params)
     json_response(@albums, :created)
   end
 
   # GET /albums/:id
   def show
-    json_response(@albums)
+    json_response(@album)
   end
 
   # PUT /albums/:id
   def update
-    @albums.update(albums_params)
+    @album.update(album_params)
     head :no_content
   end
 
   # DELETE /albums/:id
   def destroy
-    @albums.destroy
+    @album.destroy
     head :no_content
   end
 
   private
 
-  def albums_params
+  def album_params
     # whitelist params
-    params.permit(:name, :art)
+    params.permit(:name, :art, :artist_id)
   end
 
-  def load_albums
-    @albums = Album.find(params[:id])
+  def load_album
+    @album = Album.find(params[:id])
   end
 end
