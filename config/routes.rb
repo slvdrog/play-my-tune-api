@@ -2,10 +2,9 @@ Rails.application.routes.draw do
 
   apipie
   resources :artists do
-    resources :albums    
-    resources :songs    
+    resources :albums do 
+      resources :songs
+    end    
   end
-  resources :albums do
-    resources :songs
-  end
+  resources :albums
 end
