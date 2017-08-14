@@ -1,6 +1,8 @@
 class ArtistsController < ApplicationController
   before_action :load_artist, only: [:show, :update, :destroy]
 
+  caches_action :index, :show
+
   # GET /artists
   def index
     @artists = Artist.all

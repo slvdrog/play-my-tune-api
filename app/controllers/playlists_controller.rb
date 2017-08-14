@@ -2,6 +2,7 @@ class PlaylistsController < ApplicationController
   before_action :load_playlist, only: [:show, :update, :destroy]
   before_action :load_playlist_and_song, only: [:add_song, :remove_song]
 
+  caches_action :index, :show
 
   # GET /playlists
   def index
@@ -17,7 +18,7 @@ class PlaylistsController < ApplicationController
 
   # GET /playlists/:id
   def show
-    json_response(@playlist)
+    render json: @playlist, include: :songs, status: status
   end
 
   # PUT /playlists/:id

@@ -2,6 +2,8 @@ class SongsController < ApplicationController
   before_action :load_artist_album, only: [:index, :create]
   before_action :load_song, only: [:show, :update, :destroy]
 
+  caches_action :index, :show
+
   # GET /artists/:artist_id/albums/:album_id/songs
   def index
     @songs = @album.songs
