@@ -1,7 +1,9 @@
 class AlbumsController < ApplicationController
   before_action :load_album, only: [:show, :update, :destroy]
 
-  # GET /albums
+  caches_action :index, :show
+
+  # GET /artist/albums
   def index
     @albums = Album.all
     json_response(@albums)
@@ -15,7 +17,7 @@ class AlbumsController < ApplicationController
 
   # GET /albums/:id
   def show
-    json_response(@album)
+    render json: @album, include: :songs, status: status
   end
 
   # PUT /albums/:id
