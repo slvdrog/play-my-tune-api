@@ -14,7 +14,7 @@ gem 'sqlite3'
 gem 'puma', '~> 3.7'
 
 # Document API
-gem "apipie-rails"
+gem "apipie-rails"  
 
 #Action caching for Action Pack 
 gem 'actionpack-action_caching'

@@ -1,0 +1,1836 @@
+  <h4><a href='#albums'>Albums</a></h4>
+  <ul>
+      <li><a href='#albums-index'>index</a></li>
+      <li><a href='#albums-create'>create</a></li>
+      <li><a href='#albums-show'>show</a></li>
+      <li><a href='#albums-update'>update</a></li>
+      <li><a href='#albums-destroy'>destroy</a></li>
+  </ul>
+  <h4><a href='#artists'>Artists</a></h4>
+  <ul>
+      <li><a href='#artists-index'>index</a></li>
+      <li><a href='#artists-show'>show</a></li>
+      <li><a href='#artists-create'>create</a></li>
+      <li><a href='#artists-update'>update</a></li>
+      <li><a href='#artists-destroy'>destroy</a></li>
+  </ul>
+  <h4><a href='#playlists'>Playlists</a></h4>
+  <ul>
+      <li><a href='#playlists-index'>index</a></li>
+      <li><a href='#playlists-create'>create</a></li>
+      <li><a href='#playlists-show'>show</a></li>
+      <li><a href='#playlists-update'>update</a></li>
+      <li><a href='#playlists-destroy'>destroy</a></li>
+      <li><a href='#playlists-add_song'>add_song</a></li>
+      <li><a href='#playlists-remove_song'>remove_song</a></li>
+  </ul>
+  <h4><a href='#songs'>Songs</a></h4>
+  <ul>
+      <li><a href='#songs-index'>index</a></li>
+      <li><a href='#songs-create'>create</a></li>
+      <li><a href='#songs-show'>show</a></li>
+      <li><a href='#songs-update'>update</a></li>
+      <li><a href='#songs-destroy'>destroy</a></li>
+  </ul>
+
+
+
+  <hr/>
+
+  <div>
+    <h2 id="albums">
+      <a href='#albums'>Albums</a><br>
+      <small>Albums endpoint</small>
+    </h2>
+  </div>
+
+    <div>
+<p>Album Management</p>
+</div>
+
+  <div>
+
+      <hr/>
+
+      <h3 id="albums-index">
+      <a href='#albums'>Albums</a> / <a href='#albums-index'>index</a>
+      </h3>
+
+      <div>
+          <h4>
+              GET /artists/:artist_id/albums
+            <br>
+            <small></small>
+          </h4>
+          <h4>
+              GET /albums
+            <br>
+            <small></small>
+          </h4>
+      </div>
+
+      <div>
+        
+
+          <h4>Errors</h4>
+            404
+            Missing
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+            500
+            Server crashed 
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+            422
+            Could not save the entity.
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+            401
+            Bad request
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+
+      </div>
+      <hr/>
+
+      <h3 id="albums-create">
+      <a href='#albums'>Albums</a> / <a href='#albums-create'>create</a>
+      </h3>
+
+      <div>
+          <h4>
+              POST /artists/:artist_id/albums
+            <br>
+            <small></small>
+          </h4>
+          <h4>
+              POST /albums
+            <br>
+            <small></small>
+          </h4>
+      </div>
+
+      <div>
+        
+
+          <h4>Errors</h4>
+            404
+            Missing
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+            500
+            Server crashed 
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+            422
+            Could not save the entity.
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+            401
+            Bad request
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>name </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>Album&#39;s name</p>
+
+    </li>
+    
+    <li>
+      <strong>art </strong>:
+      <small>
+        optional
+        
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>Album&#39;s cover_art</p>
+
+    </li>
+    
+</ul>
+
+      </div>
+      <hr/>
+
+      <h3 id="albums-show">
+      <a href='#albums'>Albums</a> / <a href='#albums-show'>show</a>
+      </h3>
+
+      <div>
+          <h4>
+              GET /artists/:artist_id/albums/:id
+            <br>
+            <small></small>
+          </h4>
+          <h4>
+              GET /albums/:id
+            <br>
+            <small></small>
+          </h4>
+      </div>
+
+      <div>
+        
+
+          <h4>Errors</h4>
+            404
+            Missing
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+            500
+            Server crashed 
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+            422
+            Could not save the entity.
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+            401
+            Bad request
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>id </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>Album&#39;s id</p>
+
+    </li>
+    
+</ul>
+
+      </div>
+      <hr/>
+
+      <h3 id="albums-update">
+      <a href='#albums'>Albums</a> / <a href='#albums-update'>update</a>
+      </h3>
+
+      <div>
+          <h4>
+              PATCH /artists/:artist_id/albums/:id
+            <br>
+            <small></small>
+          </h4>
+          <h4>
+              PUT /artists/:artist_id/albums/:id
+            <br>
+            <small></small>
+          </h4>
+          <h4>
+              PATCH /albums/:id
+            <br>
+            <small></small>
+          </h4>
+          <h4>
+              PUT /albums/:id
+            <br>
+            <small></small>
+          </h4>
+      </div>
+
+      <div>
+        
+
+          <h4>Errors</h4>
+            404
+            Missing
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+            500
+            Server crashed 
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+            422
+            Could not save the entity.
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+            401
+            Bad request
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>id </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>Album&#39;s id</p>
+
+    </li>
+    
+    <li>
+      <strong>name </strong>:
+      <small>
+        optional
+        
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>Album&#39;s name</p>
+
+    </li>
+    
+    <li>
+      <strong>art </strong>:
+      <small>
+        optional
+        
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>Album&#39;s cover_art</p>
+
+    </li>
+    
+</ul>
+
+      </div>
+      <hr/>
+
+      <h3 id="albums-destroy">
+      <a href='#albums'>Albums</a> / <a href='#albums-destroy'>destroy</a>
+      </h3>
+
+      <div>
+          <h4>
+              DELETE /artists/:artist_id/albums/:id
+            <br>
+            <small></small>
+          </h4>
+          <h4>
+              DELETE /albums/:id
+            <br>
+            <small></small>
+          </h4>
+      </div>
+
+      <div>
+        
+
+          <h4>Errors</h4>
+            404
+            Missing
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+            500
+            Server crashed 
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+            422
+            Could not save the entity.
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+            401
+            Bad request
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>id </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>Album&#39;s id</p>
+
+    </li>
+    
+</ul>
+
+      </div>
+  </div>
+
+  <hr/>
+
+  <div>
+    <h2 id="artists">
+      <a href='#artists'>Artists</a><br>
+      <small>Artists endpoint</small>
+    </h2>
+  </div>
+
+    <div>
+<p>Artist Management</p>
+</div>
+
+  <div>
+
+      <hr/>
+
+      <h3 id="artists-index">
+      <a href='#artists'>Artists</a> / <a href='#artists-index'>index</a>
+      </h3>
+
+      <div>
+          <h4>
+              GET /artists
+            <br>
+            <small></small>
+          </h4>
+      </div>
+
+      <div>
+        
+
+          <h4>Errors</h4>
+            404
+            Missing
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+            500
+            Server crashed 
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+            422
+            Could not save the entity.
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+            401
+            Bad request
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+
+      </div>
+      <hr/>
+
+      <h3 id="artists-show">
+      <a href='#artists'>Artists</a> / <a href='#artists-show'>show</a>
+      </h3>
+
+      <div>
+          <h4>
+              GET /artists/:id
+            <br>
+            <small></small>
+          </h4>
+      </div>
+
+      <div>
+        
+
+          <h4>Errors</h4>
+            404
+            Missing
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+            500
+            Server crashed 
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+            422
+            Could not save the entity.
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+            401
+            Bad request
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>id </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>Artist&#39;s id</p>
+
+    </li>
+    
+</ul>
+
+      </div>
+      <hr/>
+
+      <h3 id="artists-create">
+      <a href='#artists'>Artists</a> / <a href='#artists-create'>create</a>
+      </h3>
+
+      <div>
+          <h4>
+              POST /artists
+            <br>
+            <small></small>
+          </h4>
+      </div>
+
+      <div>
+        
+
+          <h4>Errors</h4>
+            404
+            Missing
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+            500
+            Server crashed 
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+            422
+            Could not save the entity.
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+            401
+            Bad request
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>name </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>Artist&#39;s name</p>
+
+    </li>
+    
+    <li>
+      <strong>bio </strong>:
+      <small>
+        optional
+        
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>Artist&#39;s bio</p>
+
+    </li>
+    
+</ul>
+
+      </div>
+      <hr/>
+
+      <h3 id="artists-update">
+      <a href='#artists'>Artists</a> / <a href='#artists-update'>update</a>
+      </h3>
+
+      <div>
+          <h4>
+              PATCH /artists/:id
+            <br>
+            <small></small>
+          </h4>
+          <h4>
+              PUT /artists/:id
+            <br>
+            <small></small>
+          </h4>
+      </div>
+
+      <div>
+        
+
+          <h4>Errors</h4>
+            404
+            Missing
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+            500
+            Server crashed 
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+            422
+            Could not save the entity.
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+            401
+            Bad request
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>id </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>Artist&#39;s id</p>
+
+    </li>
+    
+    <li>
+      <strong>name </strong>:
+      <small>
+        optional
+        
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>Artist&#39;s name</p>
+
+    </li>
+    
+    <li>
+      <strong>bio </strong>:
+      <small>
+        optional
+        
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>Artist&#39;s bio</p>
+
+    </li>
+    
+</ul>
+
+      </div>
+      <hr/>
+
+      <h3 id="artists-destroy">
+      <a href='#artists'>Artists</a> / <a href='#artists-destroy'>destroy</a>
+      </h3>
+
+      <div>
+          <h4>
+              DELETE /artists/:id
+            <br>
+            <small></small>
+          </h4>
+      </div>
+
+      <div>
+        
+
+          <h4>Errors</h4>
+            404
+            Missing
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+            500
+            Server crashed 
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+            422
+            Could not save the entity.
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+            401
+            Bad request
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>id </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>Artist&#39;s id</p>
+
+    </li>
+    
+</ul>
+
+      </div>
+  </div>
+
+  <hr/>
+
+  <div>
+    <h2 id="playlists">
+      <a href='#playlists'>Playlists</a><br>
+      <small>Playlists endpoint</small>
+    </h2>
+  </div>
+
+    <div>
+<p>Playlist Management</p>
+</div>
+
+  <div>
+
+      <hr/>
+
+      <h3 id="playlists-index">
+      <a href='#playlists'>Playlists</a> / <a href='#playlists-index'>index</a>
+      </h3>
+
+      <div>
+          <h4>
+              GET /playlists
+            <br>
+            <small></small>
+          </h4>
+      </div>
+
+      <div>
+        
+
+          <h4>Errors</h4>
+            404
+            Missing
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+            500
+            Server crashed 
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+            422
+            Could not save the entity.
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+            401
+            Bad request
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+
+      </div>
+      <hr/>
+
+      <h3 id="playlists-create">
+      <a href='#playlists'>Playlists</a> / <a href='#playlists-create'>create</a>
+      </h3>
+
+      <div>
+          <h4>
+              POST /playlists
+            <br>
+            <small></small>
+          </h4>
+      </div>
+
+      <div>
+        
+
+          <h4>Errors</h4>
+            404
+            Missing
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+            500
+            Server crashed 
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+            422
+            Could not save the entity.
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+            401
+            Bad request
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>name </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>Playlist name</p>
+
+    </li>
+    
+</ul>
+
+      </div>
+      <hr/>
+
+      <h3 id="playlists-show">
+      <a href='#playlists'>Playlists</a> / <a href='#playlists-show'>show</a>
+      </h3>
+
+      <div>
+          <h4>
+              GET /playlists/:id
+            <br>
+            <small></small>
+          </h4>
+      </div>
+
+      <div>
+        
+
+          <h4>Errors</h4>
+            404
+            Missing
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+            500
+            Server crashed 
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+            422
+            Could not save the entity.
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+            401
+            Bad request
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>id </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>Playlist id</p>
+
+    </li>
+    
+</ul>
+
+      </div>
+      <hr/>
+
+      <h3 id="playlists-update">
+      <a href='#playlists'>Playlists</a> / <a href='#playlists-update'>update</a>
+      </h3>
+
+      <div>
+          <h4>
+              PATCH /playlists/:id
+            <br>
+            <small></small>
+          </h4>
+          <h4>
+              PUT /playlists/:id
+            <br>
+            <small></small>
+          </h4>
+      </div>
+
+      <div>
+        
+
+          <h4>Errors</h4>
+            404
+            Missing
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+            500
+            Server crashed 
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+            422
+            Could not save the entity.
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+            401
+            Bad request
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>id </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>Playlist id</p>
+
+    </li>
+    
+    <li>
+      <strong>name </strong>:
+      <small>
+        optional
+        
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>Playlist name</p>
+
+    </li>
+    
+</ul>
+
+      </div>
+      <hr/>
+
+      <h3 id="playlists-destroy">
+      <a href='#playlists'>Playlists</a> / <a href='#playlists-destroy'>destroy</a>
+      </h3>
+
+      <div>
+          <h4>
+              DELETE /playlists/:id
+            <br>
+            <small></small>
+          </h4>
+      </div>
+
+      <div>
+        
+
+          <h4>Errors</h4>
+            404
+            Missing
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+            500
+            Server crashed 
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+            422
+            Could not save the entity.
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+            401
+            Bad request
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>id </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>Playlist id</p>
+
+    </li>
+    
+</ul>
+
+      </div>
+      <hr/>
+
+      <h3 id="playlists-add_song">
+      <a href='#playlists'>Playlists</a> / <a href='#playlists-add_song'>add_song</a>
+      </h3>
+
+      <div>
+          <h4>
+              POST /playlists/:playlist_id/add/:song_id
+            <br>
+            <small></small>
+          </h4>
+      </div>
+
+      <div>
+        
+
+          <h4>Errors</h4>
+            404
+            Missing
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+            500
+            Server crashed 
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+            422
+            Could not save the entity.
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+            401
+            Bad request
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>song_id </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>Song id</p>
+
+    </li>
+    
+    <li>
+      <strong>playlist_id </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>Playlist id</p>
+
+    </li>
+    
+</ul>
+
+      </div>
+      <hr/>
+
+      <h3 id="playlists-remove_song">
+      <a href='#playlists'>Playlists</a> / <a href='#playlists-remove_song'>remove_song</a>
+      </h3>
+
+      <div>
+          <h4>
+              DELETE /playlists/:playlist_id/remove/:song_id
+            <br>
+            <small></small>
+          </h4>
+      </div>
+
+      <div>
+        
+
+          <h4>Errors</h4>
+            404
+            Missing
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+            500
+            Server crashed 
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+            422
+            Could not save the entity.
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+            401
+            Bad request
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>song_id </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>Song id</p>
+
+    </li>
+    
+    <li>
+      <strong>playlist_id </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>Playlist id</p>
+
+    </li>
+    
+</ul>
+
+      </div>
+  </div>
+
+  <hr/>
+
+  <div>
+    <h2 id="songs">
+      <a href='#songs'>Songs</a><br>
+      <small>Songs endpoint</small>
+    </h2>
+  </div>
+
+    <div>
+<p>Song Management</p>
+</div>
+
+  <div>
+
+      <hr/>
+
+      <h3 id="songs-index">
+      <a href='#songs'>Songs</a> / <a href='#songs-index'>index</a>
+      </h3>
+
+      <div>
+          <h4>
+              GET /artists/:artist_id/songs
+            <br>
+            <small></small>
+          </h4>
+          <h4>
+              GET /artists/:artist_id/albums/:album_id/songs
+            <br>
+            <small></small>
+          </h4>
+          <h4>
+              GET /albums/:album_id/songs
+            <br>
+            <small></small>
+          </h4>
+      </div>
+
+      <div>
+        
+
+          <h4>Errors</h4>
+            404
+            Missing
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+            500
+            Server crashed 
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+            422
+            Could not save the entity.
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+            401
+            Bad request
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>search </strong>:
+      <small>
+        optional
+        
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>Search term for Song name</p>
+
+    </li>
+    
+</ul>
+
+      </div>
+      <hr/>
+
+      <h3 id="songs-create">
+      <a href='#songs'>Songs</a> / <a href='#songs-create'>create</a>
+      </h3>
+
+      <div>
+          <h4>
+              POST /artists/:artist_id/songs
+            <br>
+            <small></small>
+          </h4>
+          <h4>
+              POST /artists/:artist_id/albums/:album_id/songs
+            <br>
+            <small></small>
+          </h4>
+          <h4>
+              POST /albums/:album_id/songs
+            <br>
+            <small></small>
+          </h4>
+      </div>
+
+      <div>
+        
+
+          <h4>Errors</h4>
+            404
+            Missing
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+            500
+            Server crashed 
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+            422
+            Could not save the entity.
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+            401
+            Bad request
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>name </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>Song name</p>
+
+    </li>
+    
+    <li>
+      <strong>duration </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>Song duration</p>
+
+    </li>
+    
+    <li>
+      <strong>genre </strong>:
+      <small>
+        optional
+        
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>Song genre</p>
+
+    </li>
+    
+    <li>
+      <strong>featured </strong>:
+      <small>
+        optional
+        
+          [ 
+<p>Must be one of: <code>true</code>, <code>false</code>.</p>
+ ]
+      </small>
+      
+<p>Is song featured?</p>
+
+    </li>
+    
+</ul>
+
+      </div>
+      <hr/>
+
+      <h3 id="songs-show">
+      <a href='#songs'>Songs</a> / <a href='#songs-show'>show</a>
+      </h3>
+
+      <div>
+          <h4>
+              GET /artists/:artist_id/songs/:id
+            <br>
+            <small></small>
+          </h4>
+          <h4>
+              GET /artists/:artist_id/albums/:album_id/songs/:id
+            <br>
+            <small></small>
+          </h4>
+          <h4>
+              GET /albums/:album_id/songs/:id
+            <br>
+            <small></small>
+          </h4>
+      </div>
+
+      <div>
+        
+
+          <h4>Errors</h4>
+            404
+            Missing
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+            500
+            Server crashed 
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+            422
+            Could not save the entity.
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+            401
+            Bad request
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>id </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>Song id</p>
+
+    </li>
+    
+</ul>
+
+      </div>
+      <hr/>
+
+      <h3 id="songs-update">
+      <a href='#songs'>Songs</a> / <a href='#songs-update'>update</a>
+      </h3>
+
+      <div>
+          <h4>
+              PATCH /artists/:artist_id/songs/:id
+            <br>
+            <small></small>
+          </h4>
+          <h4>
+              PUT /artists/:artist_id/songs/:id
+            <br>
+            <small></small>
+          </h4>
+          <h4>
+              PATCH /artists/:artist_id/albums/:album_id/songs/:id
+            <br>
+            <small></small>
+          </h4>
+          <h4>
+              PUT /artists/:artist_id/albums/:album_id/songs/:id
+            <br>
+            <small></small>
+          </h4>
+          <h4>
+              PATCH /albums/:album_id/songs/:id
+            <br>
+            <small></small>
+          </h4>
+          <h4>
+              PUT /albums/:album_id/songs/:id
+            <br>
+            <small></small>
+          </h4>
+      </div>
+
+      <div>
+        
+
+          <h4>Errors</h4>
+            404
+            Missing
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+            500
+            Server crashed 
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+            422
+            Could not save the entity.
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+            401
+            Bad request
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>id </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>Song id</p>
+
+    </li>
+    
+    <li>
+      <strong>name </strong>:
+      <small>
+        optional
+        
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>Song name</p>
+
+    </li>
+    
+    <li>
+      <strong>duration </strong>:
+      <small>
+        optional
+        
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>Song duration</p>
+
+    </li>
+    
+    <li>
+      <strong>genre </strong>:
+      <small>
+        optional
+        
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>Song genre</p>
+
+    </li>
+    
+    <li>
+      <strong>featured </strong>:
+      <small>
+        optional
+        
+          [ 
+<p>Must be one of: <code>true</code>, <code>false</code>.</p>
+ ]
+      </small>
+      
+<p>Is song featured?</p>
+
+    </li>
+    
+</ul>
+
+      </div>
+      <hr/>
+
+      <h3 id="songs-destroy">
+      <a href='#songs'>Songs</a> / <a href='#songs-destroy'>destroy</a>
+      </h3>
+
+      <div>
+          <h4>
+              DELETE /artists/:artist_id/songs/:id
+            <br>
+            <small></small>
+          </h4>
+          <h4>
+              DELETE /artists/:artist_id/albums/:album_id/songs/:id
+            <br>
+            <small></small>
+          </h4>
+          <h4>
+              DELETE /albums/:album_id/songs/:id
+            <br>
+            <small></small>
+          </h4>
+      </div>
+
+      <div>
+        
+
+          <h4>Errors</h4>
+            404
+            Missing
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+            500
+            Server crashed 
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+            422
+            Could not save the entity.
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+            401
+            Bad request
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>id </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>Song id</p>
+
+    </li>
+    
+</ul>
+
+      </div>
+  </div>

@@ -4,10 +4,14 @@ Rails.application.routes.draw do
   resources :artists do
     resources :songs
     resources :albums do 
-      resources :songs
+      get 'shuffle', to: 'songs#shuffle'
+      resources :songs do 
+        post 'shuffle', to: 'songs#shuffle'
+      end
     end
   end
   resources :albums do 
+    get 'shuffle', to: 'songs#shuffle'
     resources :songs
   end
   resources :playlists do

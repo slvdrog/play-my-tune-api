@@ -1,0 +1,2654 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>API documentation</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link type='text/css' rel='stylesheet' href='./apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='./apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='./apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='./apidoc/stylesheets/application.css'/>
+  <!-- IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div id='container'>
+          <h4><a href='#albums'>Albums</a></h4>
+  <ul>
+      <li><a href='#albums-index'>index</a></li>
+      <li><a href='#albums-create'>create</a></li>
+      <li><a href='#albums-show'>show</a></li>
+      <li><a href='#albums-update'>update</a></li>
+      <li><a href='#albums-destroy'>destroy</a></li>
+  </ul>
+  <h4><a href='#artists'>Artists</a></h4>
+  <ul>
+      <li><a href='#artists-index'>index</a></li>
+      <li><a href='#artists-show'>show</a></li>
+      <li><a href='#artists-create'>create</a></li>
+      <li><a href='#artists-update'>update</a></li>
+      <li><a href='#artists-destroy'>destroy</a></li>
+  </ul>
+  <h4><a href='#playlists'>Playlists</a></h4>
+  <ul>
+      <li><a href='#playlists-index'>index</a></li>
+      <li><a href='#playlists-create'>create</a></li>
+      <li><a href='#playlists-show'>show</a></li>
+      <li><a href='#playlists-update'>update</a></li>
+      <li><a href='#playlists-destroy'>destroy</a></li>
+      <li><a href='#playlists-add_song'>add_song</a></li>
+      <li><a href='#playlists-remove_song'>remove_song</a></li>
+  </ul>
+  <h4><a href='#songs'>Songs</a></h4>
+  <ul>
+      <li><a href='#songs-index'>index</a></li>
+      <li><a href='#songs-create'>create</a></li>
+      <li><a href='#songs-show'>show</a></li>
+      <li><a href='#songs-update'>update</a></li>
+      <li><a href='#songs-destroy'>destroy</a></li>
+  </ul>
+
+
+
+<div>
+<p>Another API description</p>
+</div>
+
+<hr>
+
+
+  <ul class='breadcrumb'  id='albums'>
+    <li><a href='#'>PlayMyTuneApi</a><span class='divider'>/</span></li>
+    <li class='active'>Albums</li>
+  </ul>
+
+  <div class='page-header'>
+    <h1>
+      <a href='#albums'>Albums</a><br>
+      <small>Albums endpoint</small>
+    </h1>
+  </div>
+
+    <div>
+<p>Album Management</p>
+</div>
+
+  <div class='accordion' id='accordion'>
+
+      <hr>
+
+      <ul class='breadcrumb' id='albums-index'>
+        <li>
+          <a href='#'>PlayMyTuneApi</a>
+          <span class='divider'>/</span>
+        </li>
+        <li>
+          <a href='#albums'>Albums</a>
+          <span class='divider'>/</span>
+        </li>
+        <li class='active'>index</li>
+      </ul>
+
+      <div>
+          <h3>
+            <a href='#albums-index'>
+              GET /artists/:artist_id/albums
+            </a><br>
+            <small></small>
+          </h3>
+          <h3>
+            <a href='#albums-index'>
+              GET /albums
+            </a><br>
+            <small></small>
+          </h3>
+      </div>
+
+      <div>
+        
+
+          <h2>Errors</h2>
+          
+<table class="table table-bordered">
+	<thead>
+		<tr>
+			<th>Code</th>
+			<th>Description</th>
+			
+		</tr>
+	</thead>
+
+	<tbody>
+			<tr>
+				<td><span class="label label-inverse"> 404 </span></td>
+				<td>Missing</td>
+			</tr>
+			<tr>
+				<td><span class="label"> 500 </span></td>
+				<td>Server crashed </td>
+			</tr>
+			<tr>
+				<td><span class="label label-important"> 422 </span></td>
+				<td>Could not save the entity.</td>
+			</tr>
+			<tr>
+				<td><span class="label label-warning"> 401 </span></td>
+				<td>Bad request</td>
+			</tr>
+	</tbody>
+</table>
+
+
+      </div>
+      <hr>
+
+      <ul class='breadcrumb' id='albums-create'>
+        <li>
+          <a href='#'>PlayMyTuneApi</a>
+          <span class='divider'>/</span>
+        </li>
+        <li>
+          <a href='#albums'>Albums</a>
+          <span class='divider'>/</span>
+        </li>
+        <li class='active'>create</li>
+      </ul>
+
+      <div>
+          <h3>
+            <a href='#albums-create'>
+              POST /artists/:artist_id/albums
+            </a><br>
+            <small></small>
+          </h3>
+          <h3>
+            <a href='#albums-create'>
+              POST /albums
+            </a><br>
+            <small></small>
+          </h3>
+      </div>
+
+      <div>
+        
+
+          <h2>Errors</h2>
+          
+<table class="table table-bordered">
+	<thead>
+		<tr>
+			<th>Code</th>
+			<th>Description</th>
+			
+		</tr>
+	</thead>
+
+	<tbody>
+			<tr>
+				<td><span class="label label-inverse"> 404 </span></td>
+				<td>Missing</td>
+			</tr>
+			<tr>
+				<td><span class="label"> 500 </span></td>
+				<td>Server crashed </td>
+			</tr>
+			<tr>
+				<td><span class="label label-important"> 422 </span></td>
+				<td>Could not save the entity.</td>
+			</tr>
+			<tr>
+				<td><span class="label label-warning"> 401 </span></td>
+				<td>Bad request</td>
+			</tr>
+	</tbody>
+</table>
+
+
+          <h2>Params</h2>
+          <table class='table'>
+            <thead>
+              <tr>
+                <th>Param name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>name </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Album&#39;s name</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>art </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Album&#39;s cover_art</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+            </tbody>
+          </table>
+      </div>
+      <hr>
+
+      <ul class='breadcrumb' id='albums-show'>
+        <li>
+          <a href='#'>PlayMyTuneApi</a>
+          <span class='divider'>/</span>
+        </li>
+        <li>
+          <a href='#albums'>Albums</a>
+          <span class='divider'>/</span>
+        </li>
+        <li class='active'>show</li>
+      </ul>
+
+      <div>
+          <h3>
+            <a href='#albums-show'>
+              GET /artists/:artist_id/albums/:id
+            </a><br>
+            <small></small>
+          </h3>
+          <h3>
+            <a href='#albums-show'>
+              GET /albums/:id
+            </a><br>
+            <small></small>
+          </h3>
+      </div>
+
+      <div>
+        
+
+          <h2>Errors</h2>
+          
+<table class="table table-bordered">
+	<thead>
+		<tr>
+			<th>Code</th>
+			<th>Description</th>
+			
+		</tr>
+	</thead>
+
+	<tbody>
+			<tr>
+				<td><span class="label label-inverse"> 404 </span></td>
+				<td>Missing</td>
+			</tr>
+			<tr>
+				<td><span class="label"> 500 </span></td>
+				<td>Server crashed </td>
+			</tr>
+			<tr>
+				<td><span class="label label-important"> 422 </span></td>
+				<td>Could not save the entity.</td>
+			</tr>
+			<tr>
+				<td><span class="label label-warning"> 401 </span></td>
+				<td>Bad request</td>
+			</tr>
+	</tbody>
+</table>
+
+
+          <h2>Params</h2>
+          <table class='table'>
+            <thead>
+              <tr>
+                <th>Param name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Album&#39;s id</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+            </tbody>
+          </table>
+      </div>
+      <hr>
+
+      <ul class='breadcrumb' id='albums-update'>
+        <li>
+          <a href='#'>PlayMyTuneApi</a>
+          <span class='divider'>/</span>
+        </li>
+        <li>
+          <a href='#albums'>Albums</a>
+          <span class='divider'>/</span>
+        </li>
+        <li class='active'>update</li>
+      </ul>
+
+      <div>
+          <h3>
+            <a href='#albums-update'>
+              PATCH /artists/:artist_id/albums/:id
+            </a><br>
+            <small></small>
+          </h3>
+          <h3>
+            <a href='#albums-update'>
+              PUT /artists/:artist_id/albums/:id
+            </a><br>
+            <small></small>
+          </h3>
+          <h3>
+            <a href='#albums-update'>
+              PATCH /albums/:id
+            </a><br>
+            <small></small>
+          </h3>
+          <h3>
+            <a href='#albums-update'>
+              PUT /albums/:id
+            </a><br>
+            <small></small>
+          </h3>
+      </div>
+
+      <div>
+        
+
+          <h2>Errors</h2>
+          
+<table class="table table-bordered">
+	<thead>
+		<tr>
+			<th>Code</th>
+			<th>Description</th>
+			
+		</tr>
+	</thead>
+
+	<tbody>
+			<tr>
+				<td><span class="label label-inverse"> 404 </span></td>
+				<td>Missing</td>
+			</tr>
+			<tr>
+				<td><span class="label"> 500 </span></td>
+				<td>Server crashed </td>
+			</tr>
+			<tr>
+				<td><span class="label label-important"> 422 </span></td>
+				<td>Could not save the entity.</td>
+			</tr>
+			<tr>
+				<td><span class="label label-warning"> 401 </span></td>
+				<td>Bad request</td>
+			</tr>
+	</tbody>
+</table>
+
+
+          <h2>Params</h2>
+          <table class='table'>
+            <thead>
+              <tr>
+                <th>Param name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Album&#39;s id</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>name </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Album&#39;s name</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>art </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Album&#39;s cover_art</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+            </tbody>
+          </table>
+      </div>
+      <hr>
+
+      <ul class='breadcrumb' id='albums-destroy'>
+        <li>
+          <a href='#'>PlayMyTuneApi</a>
+          <span class='divider'>/</span>
+        </li>
+        <li>
+          <a href='#albums'>Albums</a>
+          <span class='divider'>/</span>
+        </li>
+        <li class='active'>destroy</li>
+      </ul>
+
+      <div>
+          <h3>
+            <a href='#albums-destroy'>
+              DELETE /artists/:artist_id/albums/:id
+            </a><br>
+            <small></small>
+          </h3>
+          <h3>
+            <a href='#albums-destroy'>
+              DELETE /albums/:id
+            </a><br>
+            <small></small>
+          </h3>
+      </div>
+
+      <div>
+        
+
+          <h2>Errors</h2>
+          
+<table class="table table-bordered">
+	<thead>
+		<tr>
+			<th>Code</th>
+			<th>Description</th>
+			
+		</tr>
+	</thead>
+
+	<tbody>
+			<tr>
+				<td><span class="label label-inverse"> 404 </span></td>
+				<td>Missing</td>
+			</tr>
+			<tr>
+				<td><span class="label"> 500 </span></td>
+				<td>Server crashed </td>
+			</tr>
+			<tr>
+				<td><span class="label label-important"> 422 </span></td>
+				<td>Could not save the entity.</td>
+			</tr>
+			<tr>
+				<td><span class="label label-warning"> 401 </span></td>
+				<td>Bad request</td>
+			</tr>
+	</tbody>
+</table>
+
+
+          <h2>Params</h2>
+          <table class='table'>
+            <thead>
+              <tr>
+                <th>Param name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Album&#39;s id</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+            </tbody>
+          </table>
+      </div>
+  </div>
+
+  <ul class='breadcrumb'  id='artists'>
+    <li><a href='#'>PlayMyTuneApi</a><span class='divider'>/</span></li>
+    <li class='active'>Artists</li>
+  </ul>
+
+  <div class='page-header'>
+    <h1>
+      <a href='#artists'>Artists</a><br>
+      <small>Artists endpoint</small>
+    </h1>
+  </div>
+
+    <div>
+<p>Artist Management</p>
+</div>
+
+  <div class='accordion' id='accordion'>
+
+      <hr>
+
+      <ul class='breadcrumb' id='artists-index'>
+        <li>
+          <a href='#'>PlayMyTuneApi</a>
+          <span class='divider'>/</span>
+        </li>
+        <li>
+          <a href='#artists'>Artists</a>
+          <span class='divider'>/</span>
+        </li>
+        <li class='active'>index</li>
+      </ul>
+
+      <div>
+          <h3>
+            <a href='#artists-index'>
+              GET /artists
+            </a><br>
+            <small></small>
+          </h3>
+      </div>
+
+      <div>
+        
+
+          <h2>Errors</h2>
+          
+<table class="table table-bordered">
+	<thead>
+		<tr>
+			<th>Code</th>
+			<th>Description</th>
+			
+		</tr>
+	</thead>
+
+	<tbody>
+			<tr>
+				<td><span class="label label-inverse"> 404 </span></td>
+				<td>Missing</td>
+			</tr>
+			<tr>
+				<td><span class="label"> 500 </span></td>
+				<td>Server crashed </td>
+			</tr>
+			<tr>
+				<td><span class="label label-important"> 422 </span></td>
+				<td>Could not save the entity.</td>
+			</tr>
+			<tr>
+				<td><span class="label label-warning"> 401 </span></td>
+				<td>Bad request</td>
+			</tr>
+	</tbody>
+</table>
+
+
+      </div>
+      <hr>
+
+      <ul class='breadcrumb' id='artists-show'>
+        <li>
+          <a href='#'>PlayMyTuneApi</a>
+          <span class='divider'>/</span>
+        </li>
+        <li>
+          <a href='#artists'>Artists</a>
+          <span class='divider'>/</span>
+        </li>
+        <li class='active'>show</li>
+      </ul>
+
+      <div>
+          <h3>
+            <a href='#artists-show'>
+              GET /artists/:id
+            </a><br>
+            <small></small>
+          </h3>
+      </div>
+
+      <div>
+        
+
+          <h2>Errors</h2>
+          
+<table class="table table-bordered">
+	<thead>
+		<tr>
+			<th>Code</th>
+			<th>Description</th>
+			
+		</tr>
+	</thead>
+
+	<tbody>
+			<tr>
+				<td><span class="label label-inverse"> 404 </span></td>
+				<td>Missing</td>
+			</tr>
+			<tr>
+				<td><span class="label"> 500 </span></td>
+				<td>Server crashed </td>
+			</tr>
+			<tr>
+				<td><span class="label label-important"> 422 </span></td>
+				<td>Could not save the entity.</td>
+			</tr>
+			<tr>
+				<td><span class="label label-warning"> 401 </span></td>
+				<td>Bad request</td>
+			</tr>
+	</tbody>
+</table>
+
+
+          <h2>Params</h2>
+          <table class='table'>
+            <thead>
+              <tr>
+                <th>Param name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Artist&#39;s id</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+            </tbody>
+          </table>
+      </div>
+      <hr>
+
+      <ul class='breadcrumb' id='artists-create'>
+        <li>
+          <a href='#'>PlayMyTuneApi</a>
+          <span class='divider'>/</span>
+        </li>
+        <li>
+          <a href='#artists'>Artists</a>
+          <span class='divider'>/</span>
+        </li>
+        <li class='active'>create</li>
+      </ul>
+
+      <div>
+          <h3>
+            <a href='#artists-create'>
+              POST /artists
+            </a><br>
+            <small></small>
+          </h3>
+      </div>
+
+      <div>
+        
+
+          <h2>Errors</h2>
+          
+<table class="table table-bordered">
+	<thead>
+		<tr>
+			<th>Code</th>
+			<th>Description</th>
+			
+		</tr>
+	</thead>
+
+	<tbody>
+			<tr>
+				<td><span class="label label-inverse"> 404 </span></td>
+				<td>Missing</td>
+			</tr>
+			<tr>
+				<td><span class="label"> 500 </span></td>
+				<td>Server crashed </td>
+			</tr>
+			<tr>
+				<td><span class="label label-important"> 422 </span></td>
+				<td>Could not save the entity.</td>
+			</tr>
+			<tr>
+				<td><span class="label label-warning"> 401 </span></td>
+				<td>Bad request</td>
+			</tr>
+	</tbody>
+</table>
+
+
+          <h2>Params</h2>
+          <table class='table'>
+            <thead>
+              <tr>
+                <th>Param name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>name </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Artist&#39;s name</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>bio </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Artist&#39;s bio</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+            </tbody>
+          </table>
+      </div>
+      <hr>
+
+      <ul class='breadcrumb' id='artists-update'>
+        <li>
+          <a href='#'>PlayMyTuneApi</a>
+          <span class='divider'>/</span>
+        </li>
+        <li>
+          <a href='#artists'>Artists</a>
+          <span class='divider'>/</span>
+        </li>
+        <li class='active'>update</li>
+      </ul>
+
+      <div>
+          <h3>
+            <a href='#artists-update'>
+              PATCH /artists/:id
+            </a><br>
+            <small></small>
+          </h3>
+          <h3>
+            <a href='#artists-update'>
+              PUT /artists/:id
+            </a><br>
+            <small></small>
+          </h3>
+      </div>
+
+      <div>
+        
+
+          <h2>Errors</h2>
+          
+<table class="table table-bordered">
+	<thead>
+		<tr>
+			<th>Code</th>
+			<th>Description</th>
+			
+		</tr>
+	</thead>
+
+	<tbody>
+			<tr>
+				<td><span class="label label-inverse"> 404 </span></td>
+				<td>Missing</td>
+			</tr>
+			<tr>
+				<td><span class="label"> 500 </span></td>
+				<td>Server crashed </td>
+			</tr>
+			<tr>
+				<td><span class="label label-important"> 422 </span></td>
+				<td>Could not save the entity.</td>
+			</tr>
+			<tr>
+				<td><span class="label label-warning"> 401 </span></td>
+				<td>Bad request</td>
+			</tr>
+	</tbody>
+</table>
+
+
+          <h2>Params</h2>
+          <table class='table'>
+            <thead>
+              <tr>
+                <th>Param name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Artist&#39;s id</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>name </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Artist&#39;s name</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>bio </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Artist&#39;s bio</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+            </tbody>
+          </table>
+      </div>
+      <hr>
+
+      <ul class='breadcrumb' id='artists-destroy'>
+        <li>
+          <a href='#'>PlayMyTuneApi</a>
+          <span class='divider'>/</span>
+        </li>
+        <li>
+          <a href='#artists'>Artists</a>
+          <span class='divider'>/</span>
+        </li>
+        <li class='active'>destroy</li>
+      </ul>
+
+      <div>
+          <h3>
+            <a href='#artists-destroy'>
+              DELETE /artists/:id
+            </a><br>
+            <small></small>
+          </h3>
+      </div>
+
+      <div>
+        
+
+          <h2>Errors</h2>
+          
+<table class="table table-bordered">
+	<thead>
+		<tr>
+			<th>Code</th>
+			<th>Description</th>
+			
+		</tr>
+	</thead>
+
+	<tbody>
+			<tr>
+				<td><span class="label label-inverse"> 404 </span></td>
+				<td>Missing</td>
+			</tr>
+			<tr>
+				<td><span class="label"> 500 </span></td>
+				<td>Server crashed </td>
+			</tr>
+			<tr>
+				<td><span class="label label-important"> 422 </span></td>
+				<td>Could not save the entity.</td>
+			</tr>
+			<tr>
+				<td><span class="label label-warning"> 401 </span></td>
+				<td>Bad request</td>
+			</tr>
+	</tbody>
+</table>
+
+
+          <h2>Params</h2>
+          <table class='table'>
+            <thead>
+              <tr>
+                <th>Param name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Artist&#39;s id</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+            </tbody>
+          </table>
+      </div>
+  </div>
+
+  <ul class='breadcrumb'  id='playlists'>
+    <li><a href='#'>PlayMyTuneApi</a><span class='divider'>/</span></li>
+    <li class='active'>Playlists</li>
+  </ul>
+
+  <div class='page-header'>
+    <h1>
+      <a href='#playlists'>Playlists</a><br>
+      <small>Playlists endpoint</small>
+    </h1>
+  </div>
+
+    <div>
+<p>Playlist Management</p>
+</div>
+
+  <div class='accordion' id='accordion'>
+
+      <hr>
+
+      <ul class='breadcrumb' id='playlists-index'>
+        <li>
+          <a href='#'>PlayMyTuneApi</a>
+          <span class='divider'>/</span>
+        </li>
+        <li>
+          <a href='#playlists'>Playlists</a>
+          <span class='divider'>/</span>
+        </li>
+        <li class='active'>index</li>
+      </ul>
+
+      <div>
+          <h3>
+            <a href='#playlists-index'>
+              GET /playlists
+            </a><br>
+            <small></small>
+          </h3>
+      </div>
+
+      <div>
+        
+
+          <h2>Errors</h2>
+          
+<table class="table table-bordered">
+	<thead>
+		<tr>
+			<th>Code</th>
+			<th>Description</th>
+			
+		</tr>
+	</thead>
+
+	<tbody>
+			<tr>
+				<td><span class="label label-inverse"> 404 </span></td>
+				<td>Missing</td>
+			</tr>
+			<tr>
+				<td><span class="label"> 500 </span></td>
+				<td>Server crashed </td>
+			</tr>
+			<tr>
+				<td><span class="label label-important"> 422 </span></td>
+				<td>Could not save the entity.</td>
+			</tr>
+			<tr>
+				<td><span class="label label-warning"> 401 </span></td>
+				<td>Bad request</td>
+			</tr>
+	</tbody>
+</table>
+
+
+      </div>
+      <hr>
+
+      <ul class='breadcrumb' id='playlists-create'>
+        <li>
+          <a href='#'>PlayMyTuneApi</a>
+          <span class='divider'>/</span>
+        </li>
+        <li>
+          <a href='#playlists'>Playlists</a>
+          <span class='divider'>/</span>
+        </li>
+        <li class='active'>create</li>
+      </ul>
+
+      <div>
+          <h3>
+            <a href='#playlists-create'>
+              POST /playlists
+            </a><br>
+            <small></small>
+          </h3>
+      </div>
+
+      <div>
+        
+
+          <h2>Errors</h2>
+          
+<table class="table table-bordered">
+	<thead>
+		<tr>
+			<th>Code</th>
+			<th>Description</th>
+			
+		</tr>
+	</thead>
+
+	<tbody>
+			<tr>
+				<td><span class="label label-inverse"> 404 </span></td>
+				<td>Missing</td>
+			</tr>
+			<tr>
+				<td><span class="label"> 500 </span></td>
+				<td>Server crashed </td>
+			</tr>
+			<tr>
+				<td><span class="label label-important"> 422 </span></td>
+				<td>Could not save the entity.</td>
+			</tr>
+			<tr>
+				<td><span class="label label-warning"> 401 </span></td>
+				<td>Bad request</td>
+			</tr>
+	</tbody>
+</table>
+
+
+          <h2>Params</h2>
+          <table class='table'>
+            <thead>
+              <tr>
+                <th>Param name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>name </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Playlist name</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+            </tbody>
+          </table>
+      </div>
+      <hr>
+
+      <ul class='breadcrumb' id='playlists-show'>
+        <li>
+          <a href='#'>PlayMyTuneApi</a>
+          <span class='divider'>/</span>
+        </li>
+        <li>
+          <a href='#playlists'>Playlists</a>
+          <span class='divider'>/</span>
+        </li>
+        <li class='active'>show</li>
+      </ul>
+
+      <div>
+          <h3>
+            <a href='#playlists-show'>
+              GET /playlists/:id
+            </a><br>
+            <small></small>
+          </h3>
+      </div>
+
+      <div>
+        
+
+          <h2>Errors</h2>
+          
+<table class="table table-bordered">
+	<thead>
+		<tr>
+			<th>Code</th>
+			<th>Description</th>
+			
+		</tr>
+	</thead>
+
+	<tbody>
+			<tr>
+				<td><span class="label label-inverse"> 404 </span></td>
+				<td>Missing</td>
+			</tr>
+			<tr>
+				<td><span class="label"> 500 </span></td>
+				<td>Server crashed </td>
+			</tr>
+			<tr>
+				<td><span class="label label-important"> 422 </span></td>
+				<td>Could not save the entity.</td>
+			</tr>
+			<tr>
+				<td><span class="label label-warning"> 401 </span></td>
+				<td>Bad request</td>
+			</tr>
+	</tbody>
+</table>
+
+
+          <h2>Params</h2>
+          <table class='table'>
+            <thead>
+              <tr>
+                <th>Param name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Playlist id</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+            </tbody>
+          </table>
+      </div>
+      <hr>
+
+      <ul class='breadcrumb' id='playlists-update'>
+        <li>
+          <a href='#'>PlayMyTuneApi</a>
+          <span class='divider'>/</span>
+        </li>
+        <li>
+          <a href='#playlists'>Playlists</a>
+          <span class='divider'>/</span>
+        </li>
+        <li class='active'>update</li>
+      </ul>
+
+      <div>
+          <h3>
+            <a href='#playlists-update'>
+              PATCH /playlists/:id
+            </a><br>
+            <small></small>
+          </h3>
+          <h3>
+            <a href='#playlists-update'>
+              PUT /playlists/:id
+            </a><br>
+            <small></small>
+          </h3>
+      </div>
+
+      <div>
+        
+
+          <h2>Errors</h2>
+          
+<table class="table table-bordered">
+	<thead>
+		<tr>
+			<th>Code</th>
+			<th>Description</th>
+			
+		</tr>
+	</thead>
+
+	<tbody>
+			<tr>
+				<td><span class="label label-inverse"> 404 </span></td>
+				<td>Missing</td>
+			</tr>
+			<tr>
+				<td><span class="label"> 500 </span></td>
+				<td>Server crashed </td>
+			</tr>
+			<tr>
+				<td><span class="label label-important"> 422 </span></td>
+				<td>Could not save the entity.</td>
+			</tr>
+			<tr>
+				<td><span class="label label-warning"> 401 </span></td>
+				<td>Bad request</td>
+			</tr>
+	</tbody>
+</table>
+
+
+          <h2>Params</h2>
+          <table class='table'>
+            <thead>
+              <tr>
+                <th>Param name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Playlist id</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>name </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Playlist name</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+            </tbody>
+          </table>
+      </div>
+      <hr>
+
+      <ul class='breadcrumb' id='playlists-destroy'>
+        <li>
+          <a href='#'>PlayMyTuneApi</a>
+          <span class='divider'>/</span>
+        </li>
+        <li>
+          <a href='#playlists'>Playlists</a>
+          <span class='divider'>/</span>
+        </li>
+        <li class='active'>destroy</li>
+      </ul>
+
+      <div>
+          <h3>
+            <a href='#playlists-destroy'>
+              DELETE /playlists/:id
+            </a><br>
+            <small></small>
+          </h3>
+      </div>
+
+      <div>
+        
+
+          <h2>Errors</h2>
+          
+<table class="table table-bordered">
+	<thead>
+		<tr>
+			<th>Code</th>
+			<th>Description</th>
+			
+		</tr>
+	</thead>
+
+	<tbody>
+			<tr>
+				<td><span class="label label-inverse"> 404 </span></td>
+				<td>Missing</td>
+			</tr>
+			<tr>
+				<td><span class="label"> 500 </span></td>
+				<td>Server crashed </td>
+			</tr>
+			<tr>
+				<td><span class="label label-important"> 422 </span></td>
+				<td>Could not save the entity.</td>
+			</tr>
+			<tr>
+				<td><span class="label label-warning"> 401 </span></td>
+				<td>Bad request</td>
+			</tr>
+	</tbody>
+</table>
+
+
+          <h2>Params</h2>
+          <table class='table'>
+            <thead>
+              <tr>
+                <th>Param name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Playlist id</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+            </tbody>
+          </table>
+      </div>
+      <hr>
+
+      <ul class='breadcrumb' id='playlists-add_song'>
+        <li>
+          <a href='#'>PlayMyTuneApi</a>
+          <span class='divider'>/</span>
+        </li>
+        <li>
+          <a href='#playlists'>Playlists</a>
+          <span class='divider'>/</span>
+        </li>
+        <li class='active'>add_song</li>
+      </ul>
+
+      <div>
+          <h3>
+            <a href='#playlists-add_song'>
+              POST /playlists/:playlist_id/add/:song_id
+            </a><br>
+            <small></small>
+          </h3>
+      </div>
+
+      <div>
+        
+
+          <h2>Errors</h2>
+          
+<table class="table table-bordered">
+	<thead>
+		<tr>
+			<th>Code</th>
+			<th>Description</th>
+			
+		</tr>
+	</thead>
+
+	<tbody>
+			<tr>
+				<td><span class="label label-inverse"> 404 </span></td>
+				<td>Missing</td>
+			</tr>
+			<tr>
+				<td><span class="label"> 500 </span></td>
+				<td>Server crashed </td>
+			</tr>
+			<tr>
+				<td><span class="label label-important"> 422 </span></td>
+				<td>Could not save the entity.</td>
+			</tr>
+			<tr>
+				<td><span class="label label-warning"> 401 </span></td>
+				<td>Bad request</td>
+			</tr>
+	</tbody>
+</table>
+
+
+          <h2>Params</h2>
+          <table class='table'>
+            <thead>
+              <tr>
+                <th>Param name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>song_id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Song id</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>playlist_id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Playlist id</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+            </tbody>
+          </table>
+      </div>
+      <hr>
+
+      <ul class='breadcrumb' id='playlists-remove_song'>
+        <li>
+          <a href='#'>PlayMyTuneApi</a>
+          <span class='divider'>/</span>
+        </li>
+        <li>
+          <a href='#playlists'>Playlists</a>
+          <span class='divider'>/</span>
+        </li>
+        <li class='active'>remove_song</li>
+      </ul>
+
+      <div>
+          <h3>
+            <a href='#playlists-remove_song'>
+              DELETE /playlists/:playlist_id/remove/:song_id
+            </a><br>
+            <small></small>
+          </h3>
+      </div>
+
+      <div>
+        
+
+          <h2>Errors</h2>
+          
+<table class="table table-bordered">
+	<thead>
+		<tr>
+			<th>Code</th>
+			<th>Description</th>
+			
+		</tr>
+	</thead>
+
+	<tbody>
+			<tr>
+				<td><span class="label label-inverse"> 404 </span></td>
+				<td>Missing</td>
+			</tr>
+			<tr>
+				<td><span class="label"> 500 </span></td>
+				<td>Server crashed </td>
+			</tr>
+			<tr>
+				<td><span class="label label-important"> 422 </span></td>
+				<td>Could not save the entity.</td>
+			</tr>
+			<tr>
+				<td><span class="label label-warning"> 401 </span></td>
+				<td>Bad request</td>
+			</tr>
+	</tbody>
+</table>
+
+
+          <h2>Params</h2>
+          <table class='table'>
+            <thead>
+              <tr>
+                <th>Param name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>song_id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Song id</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>playlist_id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Playlist id</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+            </tbody>
+          </table>
+      </div>
+  </div>
+
+  <ul class='breadcrumb'  id='songs'>
+    <li><a href='#'>PlayMyTuneApi</a><span class='divider'>/</span></li>
+    <li class='active'>Songs</li>
+  </ul>
+
+  <div class='page-header'>
+    <h1>
+      <a href='#songs'>Songs</a><br>
+      <small>Songs endpoint</small>
+    </h1>
+  </div>
+
+    <div>
+<p>Song Management</p>
+</div>
+
+  <div class='accordion' id='accordion'>
+
+      <hr>
+
+      <ul class='breadcrumb' id='songs-index'>
+        <li>
+          <a href='#'>PlayMyTuneApi</a>
+          <span class='divider'>/</span>
+        </li>
+        <li>
+          <a href='#songs'>Songs</a>
+          <span class='divider'>/</span>
+        </li>
+        <li class='active'>index</li>
+      </ul>
+
+      <div>
+          <h3>
+            <a href='#songs-index'>
+              GET /artists/:artist_id/songs
+            </a><br>
+            <small></small>
+          </h3>
+          <h3>
+            <a href='#songs-index'>
+              GET /artists/:artist_id/albums/:album_id/songs
+            </a><br>
+            <small></small>
+          </h3>
+          <h3>
+            <a href='#songs-index'>
+              GET /albums/:album_id/songs
+            </a><br>
+            <small></small>
+          </h3>
+      </div>
+
+      <div>
+        
+
+          <h2>Errors</h2>
+          
+<table class="table table-bordered">
+	<thead>
+		<tr>
+			<th>Code</th>
+			<th>Description</th>
+			
+		</tr>
+	</thead>
+
+	<tbody>
+			<tr>
+				<td><span class="label label-inverse"> 404 </span></td>
+				<td>Missing</td>
+			</tr>
+			<tr>
+				<td><span class="label"> 500 </span></td>
+				<td>Server crashed </td>
+			</tr>
+			<tr>
+				<td><span class="label label-important"> 422 </span></td>
+				<td>Could not save the entity.</td>
+			</tr>
+			<tr>
+				<td><span class="label label-warning"> 401 </span></td>
+				<td>Bad request</td>
+			</tr>
+	</tbody>
+</table>
+
+
+          <h2>Params</h2>
+          <table class='table'>
+            <thead>
+              <tr>
+                <th>Param name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>search </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Search term for Song name</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+            </tbody>
+          </table>
+      </div>
+      <hr>
+
+      <ul class='breadcrumb' id='songs-create'>
+        <li>
+          <a href='#'>PlayMyTuneApi</a>
+          <span class='divider'>/</span>
+        </li>
+        <li>
+          <a href='#songs'>Songs</a>
+          <span class='divider'>/</span>
+        </li>
+        <li class='active'>create</li>
+      </ul>
+
+      <div>
+          <h3>
+            <a href='#songs-create'>
+              POST /artists/:artist_id/songs
+            </a><br>
+            <small></small>
+          </h3>
+          <h3>
+            <a href='#songs-create'>
+              POST /artists/:artist_id/albums/:album_id/songs
+            </a><br>
+            <small></small>
+          </h3>
+          <h3>
+            <a href='#songs-create'>
+              POST /albums/:album_id/songs
+            </a><br>
+            <small></small>
+          </h3>
+      </div>
+
+      <div>
+        
+
+          <h2>Errors</h2>
+          
+<table class="table table-bordered">
+	<thead>
+		<tr>
+			<th>Code</th>
+			<th>Description</th>
+			
+		</tr>
+	</thead>
+
+	<tbody>
+			<tr>
+				<td><span class="label label-inverse"> 404 </span></td>
+				<td>Missing</td>
+			</tr>
+			<tr>
+				<td><span class="label"> 500 </span></td>
+				<td>Server crashed </td>
+			</tr>
+			<tr>
+				<td><span class="label label-important"> 422 </span></td>
+				<td>Could not save the entity.</td>
+			</tr>
+			<tr>
+				<td><span class="label label-warning"> 401 </span></td>
+				<td>Bad request</td>
+			</tr>
+	</tbody>
+</table>
+
+
+          <h2>Params</h2>
+          <table class='table'>
+            <thead>
+              <tr>
+                <th>Param name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>name </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Song name</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>duration </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Song duration</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>genre </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Song genre</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>featured </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Is song featured?</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be one of: <code>true</code>, <code>false</code>.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+            </tbody>
+          </table>
+      </div>
+      <hr>
+
+      <ul class='breadcrumb' id='songs-show'>
+        <li>
+          <a href='#'>PlayMyTuneApi</a>
+          <span class='divider'>/</span>
+        </li>
+        <li>
+          <a href='#songs'>Songs</a>
+          <span class='divider'>/</span>
+        </li>
+        <li class='active'>show</li>
+      </ul>
+
+      <div>
+          <h3>
+            <a href='#songs-show'>
+              GET /artists/:artist_id/songs/:id
+            </a><br>
+            <small></small>
+          </h3>
+          <h3>
+            <a href='#songs-show'>
+              GET /artists/:artist_id/albums/:album_id/songs/:id
+            </a><br>
+            <small></small>
+          </h3>
+          <h3>
+            <a href='#songs-show'>
+              GET /albums/:album_id/songs/:id
+            </a><br>
+            <small></small>
+          </h3>
+      </div>
+
+      <div>
+        
+
+          <h2>Errors</h2>
+          
+<table class="table table-bordered">
+	<thead>
+		<tr>
+			<th>Code</th>
+			<th>Description</th>
+			
+		</tr>
+	</thead>
+
+	<tbody>
+			<tr>
+				<td><span class="label label-inverse"> 404 </span></td>
+				<td>Missing</td>
+			</tr>
+			<tr>
+				<td><span class="label"> 500 </span></td>
+				<td>Server crashed </td>
+			</tr>
+			<tr>
+				<td><span class="label label-important"> 422 </span></td>
+				<td>Could not save the entity.</td>
+			</tr>
+			<tr>
+				<td><span class="label label-warning"> 401 </span></td>
+				<td>Bad request</td>
+			</tr>
+	</tbody>
+</table>
+
+
+          <h2>Params</h2>
+          <table class='table'>
+            <thead>
+              <tr>
+                <th>Param name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Song id</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+            </tbody>
+          </table>
+      </div>
+      <hr>
+
+      <ul class='breadcrumb' id='songs-update'>
+        <li>
+          <a href='#'>PlayMyTuneApi</a>
+          <span class='divider'>/</span>
+        </li>
+        <li>
+          <a href='#songs'>Songs</a>
+          <span class='divider'>/</span>
+        </li>
+        <li class='active'>update</li>
+      </ul>
+
+      <div>
+          <h3>
+            <a href='#songs-update'>
+              PATCH /artists/:artist_id/songs/:id
+            </a><br>
+            <small></small>
+          </h3>
+          <h3>
+            <a href='#songs-update'>
+              PUT /artists/:artist_id/songs/:id
+            </a><br>
+            <small></small>
+          </h3>
+          <h3>
+            <a href='#songs-update'>
+              PATCH /artists/:artist_id/albums/:album_id/songs/:id
+            </a><br>
+            <small></small>
+          </h3>
+          <h3>
+            <a href='#songs-update'>
+              PUT /artists/:artist_id/albums/:album_id/songs/:id
+            </a><br>
+            <small></small>
+          </h3>
+          <h3>
+            <a href='#songs-update'>
+              PATCH /albums/:album_id/songs/:id
+            </a><br>
+            <small></small>
+          </h3>
+          <h3>
+            <a href='#songs-update'>
+              PUT /albums/:album_id/songs/:id
+            </a><br>
+            <small></small>
+          </h3>
+      </div>
+
+      <div>
+        
+
+          <h2>Errors</h2>
+          
+<table class="table table-bordered">
+	<thead>
+		<tr>
+			<th>Code</th>
+			<th>Description</th>
+			
+		</tr>
+	</thead>
+
+	<tbody>
+			<tr>
+				<td><span class="label label-inverse"> 404 </span></td>
+				<td>Missing</td>
+			</tr>
+			<tr>
+				<td><span class="label"> 500 </span></td>
+				<td>Server crashed </td>
+			</tr>
+			<tr>
+				<td><span class="label label-important"> 422 </span></td>
+				<td>Could not save the entity.</td>
+			</tr>
+			<tr>
+				<td><span class="label label-warning"> 401 </span></td>
+				<td>Bad request</td>
+			</tr>
+	</tbody>
+</table>
+
+
+          <h2>Params</h2>
+          <table class='table'>
+            <thead>
+              <tr>
+                <th>Param name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Song id</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>name </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Song name</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>duration </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Song duration</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>genre </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Song genre</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>featured </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Is song featured?</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be one of: <code>true</code>, <code>false</code>.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+            </tbody>
+          </table>
+      </div>
+      <hr>
+
+      <ul class='breadcrumb' id='songs-destroy'>
+        <li>
+          <a href='#'>PlayMyTuneApi</a>
+          <span class='divider'>/</span>
+        </li>
+        <li>
+          <a href='#songs'>Songs</a>
+          <span class='divider'>/</span>
+        </li>
+        <li class='active'>destroy</li>
+      </ul>
+
+      <div>
+          <h3>
+            <a href='#songs-destroy'>
+              DELETE /artists/:artist_id/songs/:id
+            </a><br>
+            <small></small>
+          </h3>
+          <h3>
+            <a href='#songs-destroy'>
+              DELETE /artists/:artist_id/albums/:album_id/songs/:id
+            </a><br>
+            <small></small>
+          </h3>
+          <h3>
+            <a href='#songs-destroy'>
+              DELETE /albums/:album_id/songs/:id
+            </a><br>
+            <small></small>
+          </h3>
+      </div>
+
+      <div>
+        
+
+          <h2>Errors</h2>
+          
+<table class="table table-bordered">
+	<thead>
+		<tr>
+			<th>Code</th>
+			<th>Description</th>
+			
+		</tr>
+	</thead>
+
+	<tbody>
+			<tr>
+				<td><span class="label label-inverse"> 404 </span></td>
+				<td>Missing</td>
+			</tr>
+			<tr>
+				<td><span class="label"> 500 </span></td>
+				<td>Server crashed </td>
+			</tr>
+			<tr>
+				<td><span class="label label-important"> 422 </span></td>
+				<td>Could not save the entity.</td>
+			</tr>
+			<tr>
+				<td><span class="label label-warning"> 401 </span></td>
+				<td>Bad request</td>
+			</tr>
+	</tbody>
+</table>
+
+
+          <h2>Params</h2>
+          <table class='table'>
+            <thead>
+              <tr>
+                <th>Param name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Song id</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+            </tbody>
+          </table>
+      </div>
+  </div>
+
+
+        
+      </div>
+    </div>
+    <hr>
+    <footer></footer>
+  </div>
+  <script type='text/javascript' src='./apidoc/javascripts/bundled/jquery.js'></script>
+<script type='text/javascript' src='./apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='./apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='./apidoc/javascripts/apipie.js'></script>
+</body>
+</html>

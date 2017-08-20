@@ -65,3 +65,7 @@ RSpec.configure do |config|
   config.include(Shoulda::Matchers::ActiveRecord, type: :model)
   config.include RequestSpecHelper, type: :request
 end
+
+Apipie.configure do |config|
+  config.validate = false
+end

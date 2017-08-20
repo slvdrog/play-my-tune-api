@@ -21,6 +21,19 @@ RSpec.describe 'Songs API', type: :request do
     it 'returns status code 200' do
       expect(response).to have_http_status(200)
     end
+
+    context "when searching for a song name" do
+      let!(:search_term) {songs.first.name[0..3]}
+      before { get "/artists/#{artist.id}/albums/#{album.id}/songs", params: {search: search_term } }
+
+      it 'returns songs with name containing search_term' do
+        expect(json.first['name']).to include(search_term)
+      end
+
+      it 'returns status code 200' do
+        expect(response).to have_http_status(200)
+      end
+    end
   end
 
   # Test suite for GET /songs/:id
@@ -131,5 +144,19 @@ RSpec.describe 'Songs API', type: :request do
     it 'returns status code 204' do
       expect(response).to have_http_status(204)
     end
+  end
+
+  describe 'GET /songs/shuffle' do
+    before { get "/artists/#{artist.id}/albums/#{album.id}/shuffle" }
+
+    it 'returns songs in random order' do
+      expect(json).not_to be_empty
+      expect(json.size).to eq(10)
+    end
+
+    it 'returns status code 200' do
+      expect(response).to have_http_status(200)
+    end
+
   end
 end

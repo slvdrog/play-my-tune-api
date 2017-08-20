@@ -4,40 +4,63 @@ class PlaylistsController < ApplicationController
 
   caches_action :index, :show
 
-  # GET /playlists
+  resource_description do
+    short 'Playlists endpoint'
+    formats ['json']
+    error 404, "Missing"
+    error 500, "Server crashed "
+    error 422, "Could not save the entity."
+    error 401, "Bad request"
+    description "Playlist Management"
+  end
+
+  api!
   def index
     @playlists = Playlist.all
     json_response(@playlists)
   end
 
-  # POST /playlists
+  api!
+  param :name, String, required: true, desc: "Playlist name"
   def create
     @playlist = Playlist.create!(playlist_params)
     json_response(@playlist, :created)
   end
 
-  # GET /playlists/:id
+  api!
+  param :id, String, required: true, desc: "Playlist id"
   def show
     render json: @playlist, include: :songs, status: status
   end
 
   # PUT /playlists/:id
+  api!
+  param :id, String, required: true, desc: "Playlist id"
+  param :name, String, desc: "Playlist name"
   def update
     @playlist.update(playlist_params)
     head :no_content
   end
 
   # DELETE /playlists/:id
+  api!
+  param :id, String, required: true, desc: "Playlist id"
   def destroy
     @playlist.destroy
     head :no_content
   end
 
+  api!
+  param :song_id, String, required: true, desc: "Song id"
+  param :playlist_id, String, required: true, desc: "Playlist id"
   def add_song
     @playlist_song = PlaylistSong.create!(song: @song, playlist: @playlist) 
     json_response(@playlist_song, :created)
   end
 
+  api!
+  param :song_id, String, required: true, desc: "Song id"
+  param :playlist_id, String, required: true, desc: "Playlist id"
   def remove_song
     PlaylistSong.where(song_id: @song.id, playlist_id: @playlist.id).first.destroy!
     head :no_content
